@@ -1,0 +1,129 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html,
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 62.5%;
+}
+
+.wrapper {
+  width: 100;
+  height: 100vh;
+  background-color: coral;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+  background-color: #f3f3f3;
+  padding: 0 0 0 1rem;
+}
+
+.header__user-profile {
+  width: 100%;
+  height: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__user--photo {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 5rem;
+  background-image: url("/images/WhatsApp Image 2021-11-02 at 14.04.00.jpeg");
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  margin-right: 0.8rem;
+}
+
+.header__user--name {
+  font-family: poppins, Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.settings {
+  width: 100%;
+  height: 70%;
+}
+
+.settings__timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3rem;
+  cursor: pointer;
+  padding-left: 0.5rem;
+  margin-bottom: 0.1rem;
+}
+
+.settings__timer--clock {
+  width: 1.3rem;
+  height: 2rem;
+  fill: rgba(0, 0, 0, 0.7);
+  margin-right: 0.4rem;
+}
+
+.settings__timer p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: poppins, Arial, Helvetica, sans-serif;
+}
+
+.settings__setting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  height: 3rem;
+  padding-left: 0.5rem;
+}
+
+.settings__setting--gear {
+  width: 1.3rem;
+  fill: rgba(0, 0, 0, 0.7);
+  margin-right: 0.4rem;
+  height: 2rem;
+}
+
+.settings__setting p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: poppins, Arial, Helvetica, sans-serif;
+}
+
+.current-date {
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: poppins, Arial, Helvetica, sans-serif;
+  padding-left: 0.5rem;
+}
+/*# sourceMappingURL=main.css.map */
