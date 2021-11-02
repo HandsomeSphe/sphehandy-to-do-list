@@ -7,14 +7,45 @@
           box-sizing: inherit;
 }
 
-html,
-body {
+html {
+  font-family: poppins, Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
+@media screen and (max-width: 26.5625em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 31em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 48em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media screen and (max-width: 90em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media screen and (max-width: 160em) {
+  html {
+    font-size: 94%;
+  }
+}
+
 body {
-  font-size: 62.5%;
+  background-color: white;
 }
 
 .wrapper {

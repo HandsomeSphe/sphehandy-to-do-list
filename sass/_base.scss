@@ -1,3 +1,47 @@
+//My media queries
+@mixin respond($breakpoint) {
+  @if $breakpoint == xs-phone {
+    @media screen and (max-width: 20em) {
+      @content;
+    }
+  }
+  @if $breakpoint == s-phone {
+    @media screen and (max-width: 23.4375em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media screen and (max-width: 26.5625em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet {
+    @media screen and (max-width: 31em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media screen and (max-width: 48em) {
+      @content;
+    }
+  }
+  @if $breakpoint == laptop {
+    @media screen and (max-width: 64em) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media screen and (max-width: 90em) {
+      @content;
+    }
+  }
+  @if $breakpoint == lan-desktop {
+    @media screen and (max-width: 160em) {
+      @content;
+    }
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -5,12 +49,28 @@
   padding: 0;
   box-sizing: inherit;
 }
-html,
-body {
+html {
+  font-family: poppins, Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
   box-sizing: border-box;
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+  @include respond(tablet) {
+    font-size: 50%;
+  }
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+  @include respond(desktop) {
+    font-size: 75%;
+  }
+  @include respond(lan-desktop) {
+    font-size: 94%;
+  }
 }
 body {
-  font-size: 62.5%;
+  background-color: white;
 }
 @mixin header {
   width: 17rem;
