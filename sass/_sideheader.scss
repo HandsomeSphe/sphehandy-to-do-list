@@ -1,6 +1,6 @@
 //User Profile
 .header {
-  flex: 0 0 20%;
+  flex: 0 0 19%;
   background-color: #f3f3f3;
   padding: 0 0 0 1rem;
   &__user-profile {
@@ -38,7 +38,7 @@
     padding-left: 0.5rem;
     margin-bottom: 0.1rem;
     &--clock {
-      width: 1.3rem;
+      width: 1rem;
       height: 2rem;
       fill: rgba(0, 0, 0, 0.7);
       margin-right: 0.4rem;
@@ -57,7 +57,7 @@
     height: 3rem;
     padding-left: 0.5rem;
     &--gear {
-      width: 1.3rem;
+      width: 1rem;
       fill: rgba(0, 0, 0, 0.7);
       margin-right: 0.4rem;
       height: 2rem;

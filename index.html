@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/ea1b201257.js"
+      crossorigin="anonymous"
+    ></script>
     <title>sphehandy-to-do-list</title>
   </head>
   <body>
@@ -44,7 +48,61 @@
         <div class="current-date">Current date: 26/10/2021</div>
       </header>
       <!--/////////////----This is main app-->
-      <main class="main"></main>
+      <main class="main">
+        <!---/>>>>>>>>>>>BACKGROUND IMAGE<<<<<<<<<<<<<<<<<<-->
+        <div class="main__background">
+          <div class="main__background--buttons">
+            <button class="upload">Upload</button>
+            <p class="separator">|</p>
+            <button class="remove">Remove</button>
+          </div>
+        </div>
+        <!---/>>>>>>>>>>>THE ACTUAL APP<<<<<<<<<<<<<<<<<<-->
+        <div class="tabs__contanier">
+          <!--Added tasks-->
+          <div class="tasks__tab">
+            <div class="tasks__tab--header">
+              <i class="fas fa-angle-double-up"></i>
+              <input type="text" class="heading" placeholder="Add a task" />
+              <div class="add-btn">
+                <i class="fas fa-plus"></i>
+              </div>
+            </div>
+            <div class="to-do">
+              <div class="to-do--text">Morning Jog</div>
+              <i class="far fa-trash-alt"></i>
+            </div>
+            <div class="to-do">
+              <div class="to-do--text">Check emails</div>
+              <i class="far fa-trash-alt"></i>
+            </div>
+            <div class="to-do">
+              <div class="to-do--text">Code Klaviyo website</div>
+              <i class="far fa-trash-alt"></i>
+            </div>
+          </div>
+          <!--Completed tasks-->
+          <div class="tasks__completed">
+            <div class="tasks__completed--header">
+              <i class="fas fa-angle-double-up"></i>
+              <div class="heading">Completed tasks</div>
+            </div>
+            <div class="to-do--complete">
+              <div class="to-do--text">Eat breakfast</div>
+            </div>
+          </div>
+          <!--Deleted tasks-->
+          <div class="tasks__deleted">
+            <div class="tasks__deleted--header">
+              <i class="fas fa-angle-double-up"></i>
+              <div class="heading">Deleted tasks</div>
+            </div>
+            <div class="to-do--deleted">
+              <div class="to-do--text">Go shopping</div>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
   </body>
 </html>
