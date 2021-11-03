@@ -73,7 +73,7 @@ body {
   background-color: white;
 }
 @mixin header {
-  width: 17rem;
+  width: 18rem;
   height: 3rem;
   margin: 0 auto;
   border-radius: 0.5rem 0.5rem 0 0;
@@ -84,10 +84,16 @@ body {
   font-size: 0.8rem;
   font-weight: 500;
   color: white;
+  @include respond(s-phone) {
+    width: 18rem;
+  }
+  @include respond(xs-phone) {
+    width: 16rem;
+  }
 }
 @mixin to-do {
   width: 16rem;
-  min-height: 2.5rem;
+  height: 2.5rem;
   background-color: #ffff;
   filter: drop-shadow(0px 4px 10px rgba(196, 196, 196, 0.8));
   margin: 0.5rem auto;

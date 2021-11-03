@@ -2,9 +2,19 @@
 .main {
   flex: 1;
   width: 100%;
-  //   height: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  @include respond(tab-port) {
+    height: 160vh;
+  }
+  @include respond(s-phone) {
+    height: 160vh;
+  }
+  @include respond(xs-phone) {
+    height: 160vh;
+  }
+
   &__background {
     flex: 0 0 30%;
     width: 100%;
@@ -14,6 +24,16 @@
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    @include respond(tab-port) {
+      flex: 0 0 25%;
+    }
+    @include respond(s-phone) {
+      flex: 0 0 20%;
+    }
+    @include respond(xs-phone) {
+      flex: 0 0 15%;
+    }
+
     &--buttons {
       position: absolute;
       left: 85%;
@@ -22,6 +42,17 @@
       align-items: center;
       width: 8rem;
       height: 2rem;
+      @include respond(tab-port) {
+        left: 60%;
+      }
+      @include respond(s-phone) {
+        left: 60%;
+        font-size: 0.5rem;
+      }
+      @include respond(xs-phone) {
+        left: 60%;
+        font-size: 0.5rem;
+      }
     }
   }
 }
@@ -45,21 +76,51 @@
   padding: 3.6rem 7rem 0;
   display: flex;
   font-family: poppins, Arial, Helvetica, sans-serif;
+  @include respond(tab-port) {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  @include respond(s-phone) {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  @include respond(xs-phone) {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .tasks__tab {
   width: 18rem;
   height: auto;
+  margin-right: 0.5rem;
 }
 .tasks__completed {
   width: 18rem;
-  height: 3rem;
+  height: auto;
+  margin-right: 0.5rem;
+  @include respond(s-phone) {
+    height: 16rem;
+  }
+  @include respond(xs-phone) {
+    height: 18rem;
+  }
 }
 .tasks__deleted {
   width: 18rem;
   height: 3rem;
+  margin-right: 0.5rem;
+  @include respond(s-phone) {
+    height: 16rem;
+  }
+  @include respond(xs-phone) {
+    height: 18rem;
+  }
 }
 .tasks__tab--header {
-  width: 17rem;
+  width: 18rem;
   height: 3rem;
   background-color: #ffbd3e;
   display: flex;
@@ -72,6 +133,12 @@
   font-size: 0.8rem;
   font-weight: 500;
   color: white;
+  @include respond(s-phone) {
+    width: 18rem;
+  }
+  @include respond(xs-phone) {
+    width: 16rem;
+  }
 }
 .heading {
   border: none;
@@ -139,4 +206,18 @@
 }
 .to-do--deleted {
   @include to-do;
+}
+.all-tasks {
+  width: 18rem;
+  height: 20rem;
+  padding-top: 0.7rem;
+  overflow-y: auto;
+  @include respond(s-phone) {
+    height: 11rem;
+    margin-bottom: 1rem;
+  }
+  @include respond(xs-phone) {
+    height: 13rem;
+    margin-bottom: 1rem;
+  }
 }
