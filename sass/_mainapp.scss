@@ -5,6 +5,12 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  @include respond(tab-land) {
+    height: 150vh;
+  }
+  @include respond(tablet) {
+    height: 100vh;
+  }
   @include respond(tab-port) {
     height: 160vh;
   }
@@ -24,6 +30,12 @@
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    @include respond(tab-land) {
+      flex: 0 0 40%;
+    }
+    @include respond(tablet) {
+      flex: 0 0 40%;
+    }
     @include respond(tab-port) {
       flex: 0 0 25%;
     }
@@ -42,6 +54,9 @@
       align-items: center;
       width: 8rem;
       height: 2rem;
+      @include respond(tablet) {
+        left: 75%;
+      }
       @include respond(tab-port) {
         left: 60%;
       }
@@ -76,6 +91,14 @@
   padding: 3.6rem 7rem 0;
   display: flex;
   font-family: poppins, Arial, Helvetica, sans-serif;
+  @include respond(tab-land) {
+    padding: 1rem;
+  }
+  @include respond(tablet) {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
   @include respond(tab-port) {
     padding: 1rem;
     flex-direction: column;
@@ -96,15 +119,43 @@
   width: 18rem;
   height: auto;
   margin-right: 0.5rem;
+  @include respond(tab-land) {
+    width: 15rem;
+    margin-right: 1rem;
+  }
+  @include respond(tablet) {
+    width: 18rem;
+  }
+  @include respond(tab-port) {
+    width: 18rem;
+  }
+  @include respond(s-phone) {
+    width: 18rem;
+  }
+  @include respond(xs-phone) {
+    width: 18rem;
+  }
 }
 .tasks__completed {
   width: 18rem;
   height: auto;
   margin-right: 0.5rem;
+  @include respond(tab-land) {
+    width: 15rem;
+    margin-right: 1rem;
+  }
+  @include respond(tablet) {
+    width: 18rem;
+  }
+  @include respond(tab-port) {
+    width: 18rem;
+  }
   @include respond(s-phone) {
+    width: 18rem;
     height: 16rem;
   }
   @include respond(xs-phone) {
+    width: 18rem;
     height: 18rem;
   }
 }
@@ -112,10 +163,22 @@
   width: 18rem;
   height: 3rem;
   margin-right: 0.5rem;
+  @include respond(tab-land) {
+    width: 15rem;
+    margin-right: 1rem;
+  }
+  @include respond(tablet) {
+    width: 18rem;
+  }
+  @include respond(tab-port) {
+    width: 18rem;
+  }
   @include respond(s-phone) {
+    width: 18rem;
     height: 16rem;
   }
   @include respond(xs-phone) {
+    width: 18rem;
     height: 18rem;
   }
 }
@@ -133,6 +196,15 @@
   font-size: 0.8rem;
   font-weight: 500;
   color: white;
+  @include respond(tab-land) {
+    width: 15rem;
+  }
+  @include respond(tablet) {
+    width: 18rem;
+  }
+  @include respond(tab-port) {
+    width: 18rem;
+  }
   @include respond(s-phone) {
     width: 18rem;
   }
@@ -212,11 +284,28 @@
   height: 20rem;
   padding-top: 0.7rem;
   overflow-y: auto;
+  @include respond(tab-land) {
+    width: 15rem;
+    height: 18rem;
+    margin-bottom: 1rem;
+  }
+  @include respond(tablet) {
+    width: 18rem;
+    height: 15rem;
+    margin-bottom: 1rem;
+  }
+  @include respond(tab-port) {
+    width: 18rem;
+    height: 15rem;
+    margin-bottom: 1rem;
+  }
   @include respond(s-phone) {
+    width: 18rem;
     height: 11rem;
     margin-bottom: 1rem;
   }
   @include respond(xs-phone) {
+    width: 18rem;
     height: 13rem;
     margin-bottom: 1rem;
   }

@@ -3,6 +3,13 @@
   flex: 0 0 19%;
   background-color: #f3f3f3;
   padding: 0 0 0 1rem;
+  @include respond(tab-land) {
+    flex: 0 0 25%;
+    height: 150vh;
+  }
+  @include respond(tablet) {
+    display: none;
+  }
   @include respond(tab-port) {
     display: none;
   }

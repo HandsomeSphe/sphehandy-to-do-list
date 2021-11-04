@@ -64,6 +64,21 @@ body {
   padding: 0 0 0 1rem;
 }
 
+@media screen and (max-width: 48em) {
+  .header {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+    height: 150vh;
+  }
+}
+
+@media screen and (max-width: 31em) {
+  .header {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 26.5625em) {
   .header {
     display: none;
@@ -190,6 +205,18 @@ body {
           flex-direction: column;
 }
 
+@media screen and (max-width: 48em) {
+  .main {
+    height: 150vh;
+  }
+}
+
+@media screen and (max-width: 31em) {
+  .main {
+    height: 100vh;
+  }
+}
+
 @media screen and (max-width: 26.5625em) {
   .main {
     height: 160vh;
@@ -219,6 +246,22 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+}
+
+@media screen and (max-width: 48em) {
+  .main__background {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
+  }
+}
+
+@media screen and (max-width: 31em) {
+  .main__background {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
+  }
 }
 
 @media screen and (max-width: 26.5625em) {
@@ -257,6 +300,12 @@ body {
           align-items: center;
   width: 8rem;
   height: 2rem;
+}
+
+@media screen and (max-width: 31em) {
+  .main__background--buttons {
+    left: 75%;
+  }
 }
 
 @media screen and (max-width: 26.5625em) {
@@ -306,6 +355,25 @@ body {
   font-family: poppins, Arial, Helvetica, sans-serif;
 }
 
+@media screen and (max-width: 48em) {
+  .tabs__contanier {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 31em) {
+  .tabs__contanier {
+    padding: 1rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 @media screen and (max-width: 26.5625em) {
   .tabs__contanier {
     padding: 1rem;
@@ -351,20 +419,72 @@ body {
   margin-right: 0.5rem;
 }
 
+@media screen and (max-width: 48em) {
+  .tasks__tab {
+    width: 15rem;
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 31em) {
+  .tasks__tab {
+    width: 18rem;
+  }
+}
+
+@media screen and (max-width: 26.5625em) {
+  .tasks__tab {
+    width: 18rem;
+  }
+}
+
+@media screen and (max-width: 23.4375em) {
+  .tasks__tab {
+    width: 18rem;
+  }
+}
+
+@media screen and (max-width: 20em) {
+  .tasks__tab {
+    width: 18rem;
+  }
+}
+
 .tasks__completed {
   width: 18rem;
   height: auto;
   margin-right: 0.5rem;
 }
 
+@media screen and (max-width: 48em) {
+  .tasks__completed {
+    width: 15rem;
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 31em) {
+  .tasks__completed {
+    width: 18rem;
+  }
+}
+
+@media screen and (max-width: 26.5625em) {
+  .tasks__completed {
+    width: 18rem;
+  }
+}
+
 @media screen and (max-width: 23.4375em) {
   .tasks__completed {
+    width: 18rem;
     height: 16rem;
   }
 }
 
 @media screen and (max-width: 20em) {
   .tasks__completed {
+    width: 18rem;
     height: 18rem;
   }
 }
@@ -375,14 +495,35 @@ body {
   margin-right: 0.5rem;
 }
 
+@media screen and (max-width: 48em) {
+  .tasks__deleted {
+    width: 15rem;
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 31em) {
+  .tasks__deleted {
+    width: 18rem;
+  }
+}
+
+@media screen and (max-width: 26.5625em) {
+  .tasks__deleted {
+    width: 18rem;
+  }
+}
+
 @media screen and (max-width: 23.4375em) {
   .tasks__deleted {
+    width: 18rem;
     height: 16rem;
   }
 }
 
 @media screen and (max-width: 20em) {
   .tasks__deleted {
+    width: 18rem;
     height: 18rem;
   }
 }
@@ -407,6 +548,24 @@ body {
   font-size: 0.8rem;
   font-weight: 500;
   color: white;
+}
+
+@media screen and (max-width: 48em) {
+  .tasks__tab--header {
+    width: 15rem;
+  }
+}
+
+@media screen and (max-width: 31em) {
+  .tasks__tab--header {
+    width: 18rem;
+  }
+}
+
+@media screen and (max-width: 26.5625em) {
+  .tasks__tab--header {
+    width: 18rem;
+  }
 }
 
 @media screen and (max-width: 23.4375em) {
@@ -483,6 +642,24 @@ body {
   background-color: #2cb541;
 }
 
+@media screen and (max-width: 48em) {
+  .tasks__completed--header {
+    width: 15rem;
+  }
+}
+
+@media screen and (max-width: 31em) {
+  .tasks__completed--header {
+    width: 18rem;
+  }
+}
+
+@media screen and (max-width: 26.5625em) {
+  .tasks__completed--header {
+    width: 18rem;
+  }
+}
+
 @media screen and (max-width: 23.4375em) {
   .tasks__completed--header {
     width: 18rem;
@@ -516,6 +693,24 @@ body {
   font-weight: 500;
   color: white;
   background-color: #eb3333;
+}
+
+@media screen and (max-width: 48em) {
+  .tasks__deleted--header {
+    width: 15rem;
+  }
+}
+
+@media screen and (max-width: 31em) {
+  .tasks__deleted--header {
+    width: 18rem;
+  }
+}
+
+@media screen and (max-width: 26.5625em) {
+  .tasks__deleted--header {
+    width: 18rem;
+  }
 }
 
 @media screen and (max-width: 23.4375em) {
@@ -558,6 +753,12 @@ body {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 48em) {
+  .to-do {
+    width: 14rem;
+  }
+}
+
 .fa-trash-alt {
   cursor: pointer;
 }
@@ -577,6 +778,12 @@ body {
   color: rgba(0, 0, 0, 0.4);
 }
 
+@media screen and (max-width: 48em) {
+  .to-do--complete {
+    width: 14rem;
+  }
+}
+
 .to-do--deleted {
   width: 16rem;
   height: 2.5rem;
@@ -591,6 +798,12 @@ body {
   color: rgba(0, 0, 0, 0.4);
 }
 
+@media screen and (max-width: 48em) {
+  .to-do--deleted {
+    width: 14rem;
+  }
+}
+
 .all-tasks {
   width: 18rem;
   height: 20rem;
@@ -598,8 +811,33 @@ body {
   overflow-y: auto;
 }
 
+@media screen and (max-width: 48em) {
+  .all-tasks {
+    width: 15rem;
+    height: 18rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 31em) {
+  .all-tasks {
+    width: 18rem;
+    height: 15rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 26.5625em) {
+  .all-tasks {
+    width: 18rem;
+    height: 15rem;
+    margin-bottom: 1rem;
+  }
+}
+
 @media screen and (max-width: 23.4375em) {
   .all-tasks {
+    width: 18rem;
     height: 11rem;
     margin-bottom: 1rem;
   }
@@ -607,6 +845,7 @@ body {
 
 @media screen and (max-width: 20em) {
   .all-tasks {
+    width: 18rem;
     height: 13rem;
     margin-bottom: 1rem;
   }
