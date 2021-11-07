@@ -850,4 +850,22 @@ body {
     margin-bottom: 1rem;
   }
 }
+
+.close_tab {
+  height: 0;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.transform {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+#time {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
 /*# sourceMappingURL=main.css.map */

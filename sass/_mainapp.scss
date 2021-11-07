@@ -310,3 +310,15 @@
     margin-bottom: 1rem;
   }
 }
+.close_tab {
+  height: 0;
+  transition: all 0.6s;
+}
+.transform {
+  transform: rotate(180deg);
+  transition: all 0.6s;
+}
+#time {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}

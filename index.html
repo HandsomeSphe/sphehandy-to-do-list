@@ -45,7 +45,8 @@
           </div>
         </div>
         <!---/>>>>>>>>>>CURRENT DATE<<<<<<<<<<<<<<<<<<-->
-        <div class="current-date">Current date: 26/10/2021</div>
+        <div class="current-date" id="time">Current Time: 26/10/2021</div>
+        <div class="current-date" id="dateToday">Current date: 26/10/2021</div>
       </header>
       <!--/////////////----This is main app-->
       <main class="main">
@@ -62,7 +63,7 @@
           <!--Added tasks-->
           <div class="tasks__tab">
             <div class="tasks__tab--header">
-              <i class="fas fa-angle-double-up"></i>
+              <i class="fas fa-angle-double-up" id="add"></i>
               <input type="text" class="heading" placeholder="Add a task" />
               <div class="add-btn">
                 <i class="fas fa-plus"></i>
@@ -86,10 +87,10 @@
           <!--Completed tasks-->
           <div class="tasks__completed">
             <div class="tasks__completed--header">
-              <i class="fas fa-angle-double-up"></i>
+              <i class="fas fa-angle-double-up" id="done"></i>
               <div class="heading">Completed tasks</div>
             </div>
-            <div class="all-tasks">
+            <div class="all-tasks" id="completedTasks">
               <div class="to-do--complete">
                 <div class="to-do--text">Eat breakfast</div>
               </div>
@@ -98,10 +99,10 @@
           <!--Deleted tasks-->
           <div class="tasks__deleted">
             <div class="tasks__deleted--header">
-              <i class="fas fa-angle-double-up"></i>
+              <i class="fas fa-angle-double-up" id="out"></i>
               <div class="heading">Deleted tasks</div>
             </div>
-            <div class="all-tasks">
+            <div class="all-tasks" id="deletedTask">
               <div class="to-do--deleted">
                 <div class="to-do--text">Go shopping</div>
               </div>
