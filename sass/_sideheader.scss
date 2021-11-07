@@ -92,3 +92,35 @@
   font-family: poppins, Arial, Helvetica, sans-serif;
   padding-left: 0.5rem;
 }
+.timer__inputs {
+  background-color: coral;
+  width: 90%;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+label {
+  font-size: 0.8rem;
+}
+#minutes,
+#seconds {
+  width: 3rem;
+  margin: 0 0 0.5rem 1rem;
+}
+#minutes:active,
+#minutes:focus,
+#seconds:active,
+#seconds:focus {
+  outline: none;
+}
+.submit {
+  width: 3rem;
+  margin-left: 4.5rem;
+}
+.output {
+  width: 8rem;
+  height: 2rem;
+  background-color: white;
+  margin-top: 1rem;
+}

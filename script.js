@@ -74,7 +74,9 @@ if (day < 10) {
 document.querySelector(
   "#dateToday"
 ).innerHTML = `Today's Date: ${day}/${month}/${year}`;
-//deleting items
+
+///////////
+////////////////////deleting items
 
 ///////////////FIRST METHOD AND IT HAVE ISSUES
 // trashs.forEach(function (trash) {
@@ -84,6 +86,7 @@ document.querySelector(
 //   });
 // });
 add_task_contanier.addEventListener("click", function (e) {
+  //Deleted tasks
   if (e.target.classList.contains("fa-trash-alt")) {
     const deletedTask = e.target.previousElementSibling.innerHTML;
     copyTextDeleted(deletedTask);
@@ -111,3 +114,21 @@ const copyTextDeleted = function (text) {
 
   deleted_task_contanier.insertAdjacentHTML("beforeend", htmlDeleted);
 };
+
+////Set time
+
+//take the minutes
+let user_minutes = document.querySelector("#minutes");
+//take seconds
+let user_seconds = document.querySelector("#seconds");
+const set_button = document.querySelector(".submit");
+const user_output = document.querySelector(".output");
+
+set_button.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  user_output.innerHTML = `Timer = ${user_minutes.value}:${user_seconds.value}`;
+});
+//minus one 1 second to the seconds until it equals 0
+//then reduce the minute by 1
+//then start reducing the seconds again

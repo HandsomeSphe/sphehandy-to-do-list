@@ -35,6 +35,18 @@
             </svg>
             <p class="timer">Set timer</p>
           </div>
+          <form class="timer__inputs">
+            <label for="minutes">
+              minutes
+              <input type="number" id="minutes" required />
+            </label>
+            <label for="seconds">
+              seconds
+              <input type="number" id="seconds" required />
+            </label>
+            <button class="submit">Set</button>
+            <div class="output"></div>
+          </form>
           <div class="settings__setting">
             <svg class="settings__setting--gear">
               <use
@@ -91,9 +103,9 @@
               <div class="heading">Completed tasks</div>
             </div>
             <div class="all-tasks" id="completedTasks">
-              <div class="to-do--complete">
+              <!-- <div class="to-do--complete">
                 <div class="to-do--text">Eat breakfast</div>
-              </div>
+              </div> -->
             </div>
           </div>
           <!--Deleted tasks-->
@@ -103,9 +115,9 @@
               <div class="heading">Deleted tasks</div>
             </div>
             <div class="all-tasks" id="deletedTask">
-              <div class="to-do--deleted">
+              <!-- <div class="to-do--deleted">
                 <div class="to-do--text">Go shopping</div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
