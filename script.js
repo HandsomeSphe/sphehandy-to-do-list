@@ -7,6 +7,7 @@ const deleted_task_contanier = document.querySelector("#deletedTask");
 const close_tab = document.querySelector("#add");
 const close_tab_complete = document.querySelector("#done");
 const close_tab_deleted = document.querySelector("#out");
+const trash = document.querySelector(".fa-trash-alt");
 
 const add_a_task = function () {
   if (user__input.value.length > 0) {
@@ -20,28 +21,6 @@ const add_a_task = function () {
     //Clearing input field
     user__input.value = "";
     user__input.focus();
-
-    //deleting a to-do
-    const copyTextDeleted = function (text) {
-      const htmlDeleted = `<div class="to-do--deleted">
-      <div class="to-do--text">${text}</div>
-    </div>`;
-
-      deleted_task_contanier.insertAdjacentHTML("beforeend", htmlDeleted);
-    };
-    const trash = document.querySelector(".fa-trash-alt");
-    add_task_contanier.addEventListener("click", function (e) {
-      if (e.target.includes == trash) {
-        e.target.parentNode.remove();
-      }
-    });
-    ///////////////FIRST METHOD AND IT HAVE ISSUES
-    // trashs.forEach(function (trash) {
-    //   trash.addEventListener("click", function () {
-    //     console.log(this.parentNode.innerHTML);
-    //     this.parentNode.remove();
-    //   });
-    // });
   } else {
     alert(`Please insert something on the add a task section`);
   }
@@ -74,7 +53,7 @@ function todaysDate() {
       minutes = "0" + minutes;
     }
     if (seconds < 10) {
-      seconds = "0" + seconds;
+      minutes = "0" + minutes;
     }
     document.querySelector(
       "#time"
@@ -95,3 +74,40 @@ if (day < 10) {
 document.querySelector(
   "#dateToday"
 ).innerHTML = `Today's Date: ${day}/${month}/${year}`;
+//deleting items
+
+///////////////FIRST METHOD AND IT HAVE ISSUES
+// trashs.forEach(function (trash) {
+//   trash.addEventListener("click", function () {
+//     console.log(this.parentNode.innerHTML);
+//     this.parentNode.remove();
+//   });
+// });
+add_task_contanier.addEventListener("click", function (e) {
+  if (e.target.classList.contains("fa-trash-alt")) {
+    const deletedTask = e.target.previousElementSibling.innerHTML;
+    copyTextDeleted(deletedTask);
+    e.target.parentNode.remove();
+  }
+  //Completed tasks
+  if (e.target.classList.contains("to-do--text")) {
+    copyTextCompleted(e.target.innerHTML);
+    e.target.parentNode.remove();
+  }
+});
+// Completed  task
+const copyTextCompleted = function (text) {
+  const htmlCompleted = `<div class="to-do--complete">
+  <div class="to-do--text">${text}t</div>
+</div>`;
+
+  completed_task_contaneir.insertAdjacentHTML("beforeend", htmlCompleted);
+};
+//deleting a to-do
+const copyTextDeleted = function (text) {
+  const htmlDeleted = `<div class="to-do--deleted">
+      <div class="to-do--text">${text}</div>
+    </div>`;
+
+  deleted_task_contanier.insertAdjacentHTML("beforeend", htmlDeleted);
+};
